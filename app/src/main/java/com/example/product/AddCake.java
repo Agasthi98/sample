@@ -64,18 +64,16 @@ public class AddCake extends Fragment {
         quantity = view.findViewById(R.id.add_quantity);
         price = view.findViewById(R.id.add_price);
         buttonAdd = view.findViewById(R.id.add_button);
-        cakeImg = view.findViewById(R.id.add_image);
+        cakeImg = view.findViewById(R.id.add_product_image);
         spAuth = FirebaseAuth.getInstance();
-        allItemReference = FirebaseStorage.getInstance().getReference("All_cakes");
 
+        allItemReference = FirebaseStorage.getInstance().getReference("Cake_Images");
 
         mProgressDialog = new ProgressDialog(getActivity());
 
-        cakeImg.setOnClickListener(new View.OnClickListener(){
-
+        cakeImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                System.out.println("Hello");
                 Intent intent = new Intent(Intent.ACTION_PICK);
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
@@ -87,6 +85,7 @@ public class AddCake extends Fragment {
 
             @Override
             public void onClick(View view) {
+                System.out.println("This is in buttonAdd on click");
                 sendCake();
             }
 
@@ -116,7 +115,7 @@ public class AddCake extends Fragment {
     }
 
     private void sendCake() {
-        if(imageUri !=null){
+        if(imageUri != null){
             mProgressDialog.setMessage("Adding....");
             mProgressDialog.show();
 
@@ -144,6 +143,8 @@ public class AddCake extends Fragment {
                     });
                 }
             });
+        } else {
+            Toast.makeText(getContext(),"Please select an image", Toast.LENGTH_LONG).show();
         }
     }
 

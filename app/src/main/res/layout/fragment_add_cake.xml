@@ -70,7 +70,7 @@
 
 
             <ImageView
-                android:id="@+id/add_image"
+                android:id="@+id/add_product_image"
                 android:layout_width="320dp"
                 android:layout_height="320dp"
                 android:src="@drawable/ic_add"
