@@ -7,21 +7,17 @@
                 android:title="Home"
                 android:icon="@drawable/ic_home"/>
             <item
-                android:id="@+id/nav_seller_account"
-                android:title="My Seller Account"
+                android:id="@+id/nav_admin_account"
+                android:title="Admin Account"
                 android:icon="@drawable/ic_user_account"/>
             <item
-                android:id="@+id/nav_seller_account_update"
-                android:title="Update Seller Profile"
+                android:id="@+id/nav_admin_account_update"
+                android:title="Update admin Profile"
                 android:icon="@drawable/ic_update_user"/>
             <item
-                android:id="@+id/nav_add_product"
-                android:title="Add Product To Sell"
+                android:id="@+id/nav_add_cake"
+                android:title="Add Cake To Sell"
                 android:icon="@drawable/ic_add_product"/>
-            <item
-                android:id="@+id/nav_seller_items"
-                android:title="My Items"
-                android:icon="@drawable/ic_items"/>
             <item
                 android:id="@+id/nav_settings"
                 android:title="Settings"

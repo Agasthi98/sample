@@ -72,7 +72,7 @@
                 android:textColor="@color/textColorWhite"
                 android:padding="5dp"
                 android:gravity="center"
-                android:id="@+id/login_as_seller"/>
+                android:id="@+id/login_as_admin"/>
 
             <TextView
                 android:layout_width="match_parent"
