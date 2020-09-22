@@ -15,7 +15,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class SellerHome extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class AdminHome extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout sellerDrawer;
     private NavigationView sellerNavigation;
@@ -26,7 +26,7 @@ public class SellerHome extends AppCompatActivity implements NavigationView.OnNa
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_seller_home);
+        setContentView(R.layout.activity_admin_home);
 
         // Assign layout variables
         sellerDrawer = findViewById(R.id.seller_drawer_layout);
@@ -34,7 +34,7 @@ public class SellerHome extends AppCompatActivity implements NavigationView.OnNa
         sellerToolBar = findViewById(R.id.toolbar);
         toggle = new ActionBarDrawerToggle(this,sellerDrawer,R.string.open,R.string.close);
         //
-        sellerToolBar.setTitle("SellDroid Seller");
+        sellerToolBar.setTitle("Sprinkles Admin");
         setSupportActionBar(sellerToolBar);
         sellerDrawer.addDrawerListener(toggle);
         toggle.syncState();

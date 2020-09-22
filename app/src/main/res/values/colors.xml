@@ -8,6 +8,8 @@
     <color name="colorGray"> #696969</color>
     <color name="colorBlue">#00BFFF</color>
 
+
+    <color name="loginBgColor">#9F5709</color>
     <color name="buttonBgColor">#00BCD4</color>
     <color name="buttonAddToCartColor">#DD2196F3</color>
     <color name="buttonBuyNowColor">#DD2196F3</color>
