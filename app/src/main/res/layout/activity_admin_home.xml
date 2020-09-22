@@ -14,12 +14,12 @@
         android:layout_height="match_parent"/>
 
     <com.google.android.material.navigation.NavigationView
-        android:id="@+id/seller_navigation_view"
+        android:id="@+id/admin_navigation_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        app:menu="@menu/seller_navigation_menu"
+        app:menu="@menu/admin_navigation_menu"
         app:itemTextAppearance="?android:textAppearanceMedium"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -17,10 +17,10 @@ import com.google.android.material.navigation.NavigationView;
 
 public class AdminHome extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    private DrawerLayout sellerDrawer;
-    private NavigationView sellerNavigation;
-    private Toolbar sellerToolBar;
-    private FrameLayout sellerFrameLayout;
+    private DrawerLayout adminDrawer;
+    private NavigationView adminNavigation;
+    private Toolbar adminToolBar;
+    private FrameLayout adminFrameLayout;
     private ActionBarDrawerToggle toggle;
 
     @Override
@@ -29,17 +29,18 @@ public class AdminHome extends AppCompatActivity implements NavigationView.OnNav
         setContentView(R.layout.activity_admin_home);
 
         // Assign layout variables
-        sellerDrawer = findViewById(R.id.seller_drawer_layout);
-        sellerNavigation = findViewById(R.id.seller_navigation_view);
-        sellerToolBar = findViewById(R.id.toolbar);
-        toggle = new ActionBarDrawerToggle(this,sellerDrawer,R.string.open,R.string.close);
+        adminDrawer = findViewById(R.id.seller_drawer_layout);
+        adminNavigation = findViewById(R.id.admin_navigation_view);
+        adminToolBar = findViewById(R.id.toolbar);
+        toggle = new ActionBarDrawerToggle(this,adminDrawer,R.string.open,R.string.close);
+
         //
-        sellerToolBar.setTitle("Sprinkles Admin");
-        setSupportActionBar(sellerToolBar);
-        sellerDrawer.addDrawerListener(toggle);
+        adminToolBar.setTitle("Sprinkles Admin");
+        setSupportActionBar(adminToolBar);
+        adminDrawer.addDrawerListener(toggle);
         toggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        sellerNavigation.setNavigationItemSelectedListener(this);
+        adminNavigation.setNavigationItemSelectedListener(this);
 
         // Create fragment objects
 
@@ -74,7 +75,7 @@ public class AdminHome extends AppCompatActivity implements NavigationView.OnNav
     public void displaySelectedListner(int itemId) {
         Fragment fragment = null;
         switch (itemId) {
-            case R.id.nav_seller_account:
+            case R.id.nav_admin_account:
                 fragment = new AddCake();
                 break;
 //            case R.id.nav_seller_account_update:
