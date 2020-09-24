@@ -11,8 +11,8 @@
                 android:title="Admin Account"
                 android:icon="@drawable/ic_user_account"/>
             <item
-                android:id="@+id/nav_admin_account_update"
-                android:title="Update admin Profile"
+                android:id="@+id/nav_admin_cake"
+                android:title="Add new Cake"
                 android:icon="@drawable/ic_update_user"/>
             <item
                 android:id="@+id/nav_add_cake"

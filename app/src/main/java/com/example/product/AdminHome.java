@@ -44,7 +44,7 @@ public class AdminHome extends AppCompatActivity implements NavigationView.OnNav
 
         // Create fragment objects
 
-        setFragment(new AddCake());
+        setFragment(new HomePage());
     }
 
     private void setFragment(Fragment fragment) {
@@ -75,21 +75,15 @@ public class AdminHome extends AppCompatActivity implements NavigationView.OnNav
     public void displaySelectedListner(int itemId) {
         Fragment fragment = null;
         switch (itemId) {
-            case R.id.nav_admin_account:
-                fragment = new AddCake();
-                break;
-            case R.id.nav_seller_account_update:
+            case R.id.nav_home:
                 fragment = new HomePage();
                 break;
-//            case R.id.nav_add_product:
-//                fragment = new AddProduct();
-//                break;
-//            case R.id.nav_seller_items:
-//                fragment = new SellerItems();
-//                break;
-//            case R.id.nav_home:
-//                fragment = new HomePage();
-//                break;
+            case R.id.nav_admin_account:
+                fragment = new AdminProfile();
+                break;
+            case R.id.nav_admin_cake:
+                fragment = new AddCake();
+                break;
         }
 
         if (fragment != null) {

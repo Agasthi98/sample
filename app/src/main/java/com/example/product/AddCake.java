@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.provider.MediaStore;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -129,6 +130,11 @@ public class AddCake extends Fragment {
                     final String cakePrice = price.getText().toString().trim();
                     final String cakeId = spReference.push().getKey();
 
+                    if (TextUtils.isEmpty(name)) {
+                        cakeName.setError("Cake name is required");
+                        return;
+                    }
+
                     mProgressDialog.dismiss();
                     Toast.makeText(getContext(),"Added", Toast.LENGTH_LONG).show();
 
@@ -136,7 +142,7 @@ public class AddCake extends Fragment {
                         @Override
                         public void onSuccess(Uri uri) {
                             String url = uri.toString();
-                            Cake newCake = new Cake(cakeId,name,cakeDescription,cakeQuantity,cakePrice, url,adminName,adminEmail,adminContactNo);
+                            Cake newCake = new Cake(cakeId,name,cakeDescription,cakeQuantity,cakePrice, url);
                             spReference.child(cakeId).setValue(newCake);
 
                         }
