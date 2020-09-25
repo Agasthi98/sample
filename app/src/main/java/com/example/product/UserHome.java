@@ -39,6 +39,15 @@ public class UserHome extends AppCompatActivity implements NavigationView.OnNavi
         toggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         userNavigation.setNavigationItemSelectedListener(this);
+
+        setFragment(new HomePage());
+    }
+
+    private void setFragment(Fragment fragment) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.main_frame,fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 
     @Override
@@ -51,7 +60,7 @@ public class UserHome extends AppCompatActivity implements NavigationView.OnNavi
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawerLayout = findViewById(R.id.seller_drawer_layout);
+        DrawerLayout drawerLayout = findViewById(R.id.user_drawer_layout);
         if(drawerLayout.isDrawerOpen(GravityCompat.END)) {
             drawerLayout.closeDrawer(GravityCompat.END);
         } else {
@@ -66,10 +75,10 @@ public class UserHome extends AppCompatActivity implements NavigationView.OnNavi
                 fragment = new HomePage();
                 break;
             case R.id.nav_user_account:
-                fragment = new AdminProfile();
+//                fragment = new AdminProfile();
                 break;
             case R.id.nav_user_cart:
-                fragment = new AddCake();
+//                fragment = new AddCake();
                 break;
         }
 

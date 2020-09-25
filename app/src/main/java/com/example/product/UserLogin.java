@@ -74,7 +74,7 @@ public class UserLogin extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             dialog.dismiss();
                             Toast.makeText(getApplicationContext(), "Login Success", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(), AdminHome.class));
+                            startActivity(new Intent(getApplicationContext(), UserHome.class));
                         } else {
                             dialog.dismiss();
                             Toast.makeText(getApplicationContext(), "Login Failed", Toast.LENGTH_SHORT).show();
