@@ -20,7 +20,8 @@ public class CakeViewHolder extends RecyclerView.ViewHolder {
         super(itemView);
         cakeImage = itemView.findViewById(R.id.display_cake_image);
         cakeName = itemView.findViewById(R.id.display_cake_name);
-        cakePrice = itemView.findViewById(R.id.display_cake_price);
         cakeQuantity = itemView.findViewById(R.id.display_cake_quantity);
+        cakePrice = itemView.findViewById(R.id.display_cake_price);
+
     }
 }
