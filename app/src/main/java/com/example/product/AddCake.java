@@ -57,8 +57,7 @@ public class AddCake extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_add_cake,container,false);
         cakeName = view.findViewById(R.id.add_cake_name);
         description = view.findViewById(R.id.add_description);

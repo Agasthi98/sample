@@ -29,7 +29,7 @@
                 android:textStyle="bold" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/login_email"
+                android:id="@+id/user_login_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -43,7 +43,7 @@
                 android:drawableLeft="@drawable/ic_email" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/login_password"
+                android:id="@+id/user_login_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -64,11 +64,11 @@
                 android:layout_margin="10dp"
                 android:width="45dp"
                 android:padding="15dp"
-                android:id="@+id/login_button"/>
+                android:id="@+id/user_login_button"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Login to User Account"
+                android:text="Login to Admin Account"
                 android:textColor="@color/textColorWhite"
                 android:padding="5dp"
                 android:gravity="center"

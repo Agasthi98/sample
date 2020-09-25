@@ -29,7 +29,7 @@ public class AdminHome extends AppCompatActivity implements NavigationView.OnNav
         setContentView(R.layout.activity_admin_home);
 
         // Assign layout variables
-        adminDrawer = findViewById(R.id.seller_drawer_layout);
+        adminDrawer = findViewById(R.id.admin_drawer_layout);
         adminNavigation = findViewById(R.id.admin_navigation_view);
         adminToolBar = findViewById(R.id.toolbar);
         toggle = new ActionBarDrawerToggle(this,adminDrawer,R.string.open,R.string.close);
@@ -64,7 +64,7 @@ public class AdminHome extends AppCompatActivity implements NavigationView.OnNav
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawerLayout = findViewById(R.id.seller_drawer_layout);
+        DrawerLayout drawerLayout = findViewById(R.id.admin_drawer_layout);
         if(drawerLayout.isDrawerOpen(GravityCompat.END)) {
             drawerLayout.closeDrawer(GravityCompat.END);
         } else {
@@ -93,7 +93,7 @@ public class AdminHome extends AppCompatActivity implements NavigationView.OnNav
             transaction.commit();
         }
 
-        DrawerLayout drawerLayout = findViewById(R.id.seller_drawer_layout);
+        DrawerLayout drawerLayout = findViewById(R.id.admin_drawer_layout);
         drawerLayout.closeDrawer(GravityCompat.START);
     }
 
