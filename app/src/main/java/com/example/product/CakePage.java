@@ -42,6 +42,7 @@ public class CakePage extends Fragment {
         cakeName = view.findViewById(R.id.display_name);
         cakePrice = view.findViewById(R.id.display_price);
         cakeQuantity = view.findViewById(R.id.display_quantity);
+        cakeDescription = view.findViewById(R.id.display_Description);
 
         addToCartButton = view.findViewById(R.id.add_to_cart_button);
         buyNowButton = view.findViewById(R.id.buy_now_button);
@@ -63,7 +64,7 @@ public class CakePage extends Fragment {
                 String itemName = bundle.getString("cakeName");
                 String itemPrice = bundle.getString("cakePrice");
                 String itemImage = bundle.getString("cakeImage");
-                String itemDescription = bundle.getString("Description");7
+                String itemDescription = bundle.getString("Description");
                 String itemId = cartReference.push().getKey();
                 int itemQuantity = 1;
                 int totalPrice = Integer.parseInt(itemPrice);
