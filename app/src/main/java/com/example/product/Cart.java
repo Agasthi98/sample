@@ -10,6 +10,8 @@ public class Cart {
     private int cakeQuantity;
     private int totPrice;
 
+    public Cart() {}
+
     public Cart(String cartId, String cakeName, String cakePrice, String cakeImage, String cakeDescription, int cakeQuantity, int totPrice) {
         this.cartId = cartId;
         this.cakeName = cakeName;

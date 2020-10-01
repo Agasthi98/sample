@@ -21,4 +21,7 @@
     <color name="inputColor">#7130E4</color>
     <color name="deleteButton">#F63C2E</color>
 
+    <color name="dbutton">#ff1a1a</color>
+    <color name="button">#2196F3</color>
+
 </resources>

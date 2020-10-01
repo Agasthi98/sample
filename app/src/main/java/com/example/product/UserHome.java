@@ -78,7 +78,7 @@ public class UserHome extends AppCompatActivity implements NavigationView.OnNavi
 //                fragment = new AdminProfile();
                 break;
             case R.id.nav_user_cart:
-//                fragment = new AddCake();
+                fragment = new CartItem();
                 break;
         }
 

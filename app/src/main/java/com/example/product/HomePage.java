@@ -45,7 +45,7 @@ public class HomePage extends Fragment {
                 holder.cakeName.setText(model.getName());
                 holder.cakePrice.setText(model.getCakePrice());
                 holder.cakeQuantity.setText(model.getCakeQuantity());
-                holder.cakeDescription.setText(model.getCakeDescription());
+  //              holder.cakeDescription.setText(model.getCakeDescription());
                 Picasso.get().load(model.getImgUri()).into(holder.cakeImage);
 
                 holder.itemCard.setOnClickListener(new View.OnClickListener(){
